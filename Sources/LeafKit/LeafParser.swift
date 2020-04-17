@@ -95,7 +95,7 @@ extension TagDeclaration {
 }
 
 
-struct LeafParser {
+public struct LeafParser {
     let name: String
     private let tokens: [LeafToken]
     private var offset: Int

@@ -1,4 +1,4 @@
-struct LeafSerializer {
+public struct LeafSerializer {
     private let ast: [Syntax]
     private var offset: Int
     private var buffer: ByteBuffer

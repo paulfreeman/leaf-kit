@@ -101,7 +101,7 @@ public struct LexerError: Error {
     }
 }
 
-struct LeafLexer {
+public struct LeafLexer {
     private enum State {
         // parses as raw, until it finds `#` (excluding escaped `\#`)
         case normal
