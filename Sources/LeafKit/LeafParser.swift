@@ -100,7 +100,7 @@ public struct LeafParser {
     private let tokens: [LeafToken]
     private var offset: Int
     
-    init(name: String, tokens: [LeafToken]) {
+    public init(name: String, tokens: [LeafToken]) {
         self.name = name
         self.tokens = tokens
         self.offset = 0
@@ -110,7 +110,7 @@ public struct LeafParser {
     private var finished: [Syntax] = []
     private var awaitingBody: [OpenContext] = []
     
-    mutating func parse() throws -> [Syntax] {
+    public mutating func parse() throws -> [Syntax] {
         while let next = peek() {
             try handle(next: next)
         }

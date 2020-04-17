@@ -118,13 +118,13 @@ public struct LeafLexer {
     private var src: TemplateSource
     private var name: String
 
-    init(name: String, template string: String) {
+    public init(name: String, template string: String) {
         self.name = name
         self.src = .init(name: name, src: string)
         self.state = .normal
     }
     
-    mutating func lex() throws -> [LeafToken] {
+    public mutating func lex() throws -> [LeafToken] {
         while let next = try self.nextToken() {
             lexed.append(next)
         }

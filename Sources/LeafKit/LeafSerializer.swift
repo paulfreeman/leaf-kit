@@ -6,7 +6,7 @@ public struct LeafSerializer {
     private let tags: [String: LeafTag]
     private let userInfo: [AnyHashable: Any]
     
-    init(
+    public init(
         ast: [Syntax],
         context data: [String: LeafData],
         tags: [String: LeafTag] = defaultTags,
@@ -20,7 +20,7 @@ public struct LeafSerializer {
         self.userInfo = userInfo
     }
     
-    mutating func serialize() throws -> ByteBuffer {
+    public mutating func serialize() throws -> ByteBuffer {
         self.offset = 0
         while let next = self.peek() {
             self.pop()
